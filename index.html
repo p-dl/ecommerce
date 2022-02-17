@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="icon" href="assets/icon.png" />
+    <title>E-com</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="fa-solid fa-building"></i>&nbsp;Home</a>
+            <a role="button" class="nav-item dropdown-toggle btn btn-dark" data-bs-toggle="dropdown"
+                data-bs-target="#cart-lists">
+                <i class="fa-solid fa-cart-plus"></i>
+                My Cart
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-start">
+                <li>
+                    <a class="dropdown-item" href="#" id="cart-lists"></a>
+                </li>
+                <li>
+                    <hr class="dropdown-divider" />
+                </li>
+                <li>
+                    <div class="dropdown-item active" href="#">Total</a>
+                </li>
+            </ul>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#info" role="button"><i
+                                class="fa-solid fa-circle-info"></i>&nbsp;About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" role="button" data-bs-toggle="modal" data-bs-target="#checkout"><i
+                                class="fa-regular fa-credit-card"></i>&nbsp;Checkout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- All products display -->
+    <div class="row justify-content-center">
+        <div class="col-10 col-md-6 col-lg-5 col-xxl-4">
+            <div id="carouselControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+                <div class="carousel-inner" id="carousel-loop">
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselControls"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselControls"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- About us page -->
+    <div class="modal fade" tabindex="-1" id="info">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">About us page</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    We are Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut consequuntur eius iure laborum
+                    totam magni. Temporibus sit illo cum suscipit alias labore, nulla officiis optio libero perspiciatis
+                    ullam laudantium similique?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#message"
+                        data-bs-whatever="@admin">Contact us</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout page -->
+    <div class="modal fade" id="checkout" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Checkout</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="signupForm">
+                        <fieldset class="text-md-end ms-4 me-4">
+                            <legend class="mt-3 text-center">Tell us about you</legend>
+                            <div class="mb-3 row">
+                                <label for="name" class="form-label col-md-4">Full Name:</label>
+                                <input class="form-control col" type="text" id="name" name="name" autocomplete="name" />
+                            </div>
+                            <div class="mb-3 row">
+                                <label for="photo" class="form-label col-md-4">Your Photo:</label>
+                                <input class="form-control col" type="file" id="photo" name="photo" />
+                            </div>
+                            <div class="mb-3 row">
+                                <label for="email" class="form-label col-md-4">Email address:</label>
+                                <input class="form-control col" type="email" name="email" id="email"
+                                    autocomplete="email" />
+                            </div>
+                            <div class="mb-3 row">
+                                <label for="phone" class="form-label col-md-4">Phone number:</label>
+                                <div class="input-group col">
+                                    <span class="input-group-text">+977</span>
+                                    <input class="form-control" type="tel" id="phone" name="phone" required />
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label for="state" class="form-label col-md-4">State / Province:</label>
+                                <select class="form-control col" id="state" name="state">
+                                    <option style="display:none;" selected value="0">प्रदेश छान्नुहोस्</option>
+                                    <option value="1">प्रदेश नं. १</option>
+                                    <option value="2">मधेश प्रदेश</option>
+                                    <option value="3">बाग्मती प्रदेश</option>
+                                    <option value="4">गण्डकी प्रदेश</option>
+                                    <option value="5">प्रदेश नं. ५</option>
+                                    <option value="6">कर्णाली प्रदेश</option>
+                                    <option value="7">सुदूरपश्चिम प्रदेश</option>
+                                </select>
+                            </div>
+                            <div class="mb-3 row">
+                                <label for="city" class="form-label col-md-4">City / Village:</label>
+                                <input class="form-control col" autocomplete="address-level2" type="text" id="city"
+                                    name="city" />
+                            </div>
+                            <button type="button" class="d-grid col-6 btn btn-success mx-auto">Place order</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Message Page -->
+    <div class="modal fade" id="message" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">E-mail:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message-text" class="col-form-label">Message:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Send message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/fde7b1b956.js" crossorigin="anonymous"></script>
+        <script src="js/main.js" type="module"></script>
+    </footer>
+</body>
+
+</html>
