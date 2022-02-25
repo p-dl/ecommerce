@@ -30,7 +30,7 @@ export const carouselItems = items => {
                 'html': [item.title, item.description]
             },
             'a': {
-                'id': ['add_to_cart'],
+                'id': [`add_to_cart${item.id}`],
                 'class': ['col-8 offset-2 btn btn-dark'],
                 'type': ['button'],
                 'html': ["Add to cart"],

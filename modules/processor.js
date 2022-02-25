@@ -67,5 +67,5 @@ const subtract_item = itemId => {
     }
 }
 const change_button = itemId => {
-    document.getElementById('add_to_cart').innerText = "Added"
+    document.getElementById(`add_to_cart${itemId}`).innerText = "Added"
 }
